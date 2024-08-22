@@ -9,16 +9,6 @@ public class ConexaoBD {
     private String username = "seu_usuario";
     private String password = "sua_senha";
 
-    private ConexaoBD() throws SQLException {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            this.connection = DriverManager.getConnection(url, username, password);
-        } catch (ClassNotFoundException | SQLException ex) {
-            ex.printStackTrace();
-            throw new SQLException("Erro ao conectar com o banco de dados", ex);
-        }
-    }
-
     public static ConexaoBD getInstance() throws SQLException {
         if (instance == null) {
             instance = new ConexaoBD();
@@ -28,7 +18,7 @@ public class ConexaoBD {
         return instance;
     }
 
-    public Connection getConnection() {
-        return connection;
+     public Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }
