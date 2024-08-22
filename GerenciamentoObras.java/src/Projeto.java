@@ -1,15 +1,98 @@
 public class Projeto {
-    private List<Engenheiro> engenheiros;
-    private List<Operario> operarios;
-    private List<Equipamento> equipamentos;
-    private List<Material> materiais;
-    private int idProjeto;
-    private String nomeProjeto;
-    private String local;
-    private Date dataInicio;
-    private Date dataTermino;
+    private List<Engenheiro>engenheiros = new ArrayList<>();
+    private List<Operario> operarios = new ArrayList<>();
+    private List<Equipamento>equipamentos = new ArrayList<>();
+    private List<Material>materiais = new ArrayList<>();
+    private int idProjeto; ok
+    private String nomeProjeto; ok
+    private String local; ok
+    rivate java.sql.Date dataIncio; ok
+    private java.sql.Date dataTerminio; ok
 
 
+    public int getIdProjeto() {
+        return idProjeto;
+    }
 
+    public void setIdProjeto(int idProjeto) {
+        this.idProjeto = idProjeto;
+    }
+
+    public String getNomeProjeto() {
+        return nomeProjeto;
+    }
+
+    public void setNomeProjeto(String nomeProjeto) {
+        this.nomeProjeto = nomeProjeto;
+    }
+
+    public String getLocal() {
+        return local;
+    }
+
+    public void setLocal(String local) {
+        this.local = local;
+    }
+
+    public Date getDataIncio() {
+        return dataIncio;
+    }
+
+    public void setDataIncio(Date dataIncio) {
+        this.dataIncio = dataIncio;
+    }
+
+    public Date getDataTerminio() {
+        return dataTerminio;
+    }
+
+    public void setDataTerminio(Date dataTerminio) {
+        this.dataTerminio = dataTerminio;
+    }
+
+    public List<Engenheiro> getEngenheiros() {
+        return engenheiros;
+    }
+
+    public void setEngenheiros(List<Engenheiro> engenheiros) {
+        this.engenheiros = engenheiros;
+    }
+
+    public List<Operario> getOperarios() {
+        return operarios;
+    }
+
+    public void setOperarios(List<Operario> operarios) {
+        this.operarios = operarios;
+    }
+
+    public List<Equipamento> getEquipamentos() {
+        return equipamentos;
+    }
+
+    public void setEquipamentos(List<Equipamento> equipamentos) {
+        this.equipamentos = equipamentos;
+    }
+
+    public List<Material> getMateriais() {
+        return materiais;
+    }
+
+    public void setMateriais(List<Material> materiais) {
+        this.materiais = materiais;
+    }
+
+    @Override
+    public String toString() {
+        return "Projeto{" +
+                "idProjeto=" + idProjeto +
+                ", nomeProjeto='" + nomeProjeto + '\'' +
+                ", local='" + local + '\'' +
+                ", dataIncio=" + dataIncio +
+                ", dataTerminio=" + dataTerminio +
+                '}';
+    }
 }
+
+
 
